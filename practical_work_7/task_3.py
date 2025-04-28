@@ -21,7 +21,7 @@ def processing_user_number():
             last_num = num % 10
             sum += last_num
             num //= 10
-        print(sum)
+        print(f'Сумма цифр: {sum}')
         processing_user_number()
     def max_user_number(num):
         max_num = 0
@@ -29,7 +29,7 @@ def processing_user_number():
             if num % 10 > max_num:
                 max_num = num % 10
             num //= 10
-        print(max_num)
+        print(f'Максимальная цифра: {max_num}')
         processing_user_number()
     def min_user_number(num):
         min_num = 9
@@ -37,7 +37,7 @@ def processing_user_number():
             if num % 10 < min_num:
                 min_num = num % 10
             num //= 10
-        print(min_num)
+        print(f'Минимальная цифра: {min_num}')
         processing_user_number()
 
     if choice == 1:
