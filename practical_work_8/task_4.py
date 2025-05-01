@@ -34,26 +34,26 @@ def change_number(num, count):
     last_digit = num % 10
     first_digit = num // 10 ** (count - 1)
     between_digits = num % 10 ** (count - 1) // 10
-    change_number = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
-    return change_number
+    change_num = last_digit * 10 ** (count - 1) + between_digits * 10 + first_digit
+    return change_num
 
 
 def main():
     first_n = int(input("Введите первое число: "))
-    if count_numbers(first_n) < 3:
+    num_count = count_numbers(first_n)
+    if num_count < 3:
         print("В первом числе меньше трёх цифр.")
         main()
     else:
-        num_count = count_numbers(first_n)
         first_change_number = change_number(first_n, num_count)
     print(f'Изменённое первое число: {first_change_number}')
 
     second_n = int(input("Введите второе число: "))
-    if count_numbers(second_n) < 4:
+    num_count = count_numbers(second_n)
+    if num_count < 4:
         print("Во втором числе меньше четырёх цифр.")
         main()
     else:
-        num_count = count_numbers(second_n)
         second_change_number = change_number(second_n, num_count)
     print(f'Изменённое второе число: {second_change_number}')
     print(f'Сумма чисел: {first_change_number + second_change_number}')
