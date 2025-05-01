@@ -20,7 +20,7 @@ def start_two_numbers():
     first_number = int(input('Введите первое число: '))
     second_number = int(input('Введите второе число: '))
     max_of_two = maximum_of_two(first_number, second_number)
-    print(f'Максимальное число из введенных: {max_of_two}')
+    print(f'Самое большое число: {max_of_two}')
 
 def start_three_numbers():
     first_number = int(input('Введите первое число: '))
@@ -28,7 +28,7 @@ def start_three_numbers():
     three_number = int(input('Введите третье число: '))
     max_of_two = maximum_of_two(first_number, second_number)
     max_of_three = maximum_of_two(max_of_two, three_number)
-    print(f'Максимальное число из введенных: {max_of_three}')
+    print(f'Самое большое число:: {max_of_three}')
 
 def start():
     menu_num = int(input('Сколько чисел хотите сравнить? 2 или 3: '))
