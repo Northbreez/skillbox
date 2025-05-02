@@ -58,5 +58,4 @@ def main():
     print(f'Изменённое второе число: {second_change_number}')
     print(f'Сумма чисел: {first_change_number + second_change_number}')
 
-
 main()
