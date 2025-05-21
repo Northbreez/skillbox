@@ -15,7 +15,5 @@ def summa_n(N):
         count += num
     return count
 
-
 N = int(input('Введите число: '))
 print(f'Сумма от 1 до {N} равна {summa_n(N)}')
-
