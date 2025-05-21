@@ -14,8 +14,7 @@
 # Количество цифр 0: 2
 # Количество букв л: 1
 
-def count_letters():
-    user_text = input('Введите текст: ')
+def count_letters(user_text):
     user_number = int(input('Какую цифру ищем? '))
     user_word = input('Какую букву ищем? ')
     num_count = 0
@@ -27,4 +26,6 @@ def count_letters():
             word_count += 1
     print(f'Количество цифр {user_number}: {num_count}')
     print(f'Количество букв {user_word}: {word_count}')
-count_letters()
+
+user_text = input('Введите текст: ')
+count_letters(user_text)
