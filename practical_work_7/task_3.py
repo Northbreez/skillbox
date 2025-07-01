@@ -7,6 +7,8 @@
 # вывести сумму его цифр, максимальную или минимальную цифру. Каждое действие оформите в виде отдельной функции,
 # а основную программу зациклите.
 # Запрошенные числа должны передаваться в функции суммы, максимума и минимума при помощи аргументов.
+from random import choice
+
 
 def sum_user_number(num):
     sum_num = 0
@@ -18,43 +20,44 @@ def sum_user_number(num):
 
 
 def max_user_number(num):
-    max_num = 0
+    max_num = -1
     while num > 0:
-        if num % 10 > max_num:
-            max_num = num % 10
-            num //= 10
+        digit = num % 10
+        if digit > max_num:
+            max_num = digit
+        num //= 10
     return max_num
 
 
 def min_user_number(num):
     min_num = 9
     while num > 0:
-        if num % 10 < min_num:
-            min_num = num % 10
-            num //= 10
+        digit = num % 10
+        if  digit < min_num:
+            min_num = digit
+        num //= 10
     return min_num
 
 
-def processing_user_number():
-    user_number = int(input('Введите целое число: '))
+user_number = int(input('Введите целое число: '))
+while choice != 0:
     choice = int(input('Введите номер действия:\n'
                        '1 - сумма цифр \n'
                        '2 - максимальная цифра \n'
                        '3 - минимальная цифра \n'
                        '0 - выход: '))
-    while True:
-        if choice == 1:
-            print(f'Сумма цифр: {sum_user_number(user_number)}')
-        elif choice == 2:
-            print(f'Максимальная цифра: {max_user_number(user_number)}')
-        elif choice == 3:
-            print(f'Минимальная цифра: {min_user_number(user_number)}')
-        elif choice == 0:
-            break
-        else:
-            print('Ошибка ввода.')
-            print()
-        processing_user_number()
-processing_user_number()
-
-
+    if choice == 1:
+        print(f'Сумма цифр: {sum_user_number(user_number)}')
+        print()
+    elif choice == 2:
+        print(f'Максимальная цифра: {max_user_number(user_number)}')
+        print()
+    elif choice == 3:
+        print(f'Минимальная цифра: {min_user_number(user_number)}')
+        print()
+    elif choice == 0:
+        print('Выход из программы')
+        break
+    else:
+        print('Ошибка ввода.')
+        print()
